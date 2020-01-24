@@ -18,6 +18,7 @@ namespace Lab0E2.Models
         {
             get
             {
+                if (_instance == null) _instance = new Data();
                 return _instance;
             }
         }
