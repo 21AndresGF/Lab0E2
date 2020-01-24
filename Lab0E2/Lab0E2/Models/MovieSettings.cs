@@ -18,9 +18,10 @@ namespace Lab0E2.Models
             List<MovieClass> getmovies = new List<MovieClass>();
             if (AllMovies.Count > 10)
             {
+                int temp = AllMovies.Count - 1;
                 for (int i = 0; i < 10; i++)
                 {
-                    getmovies.Add(AllMovies[AllMovies.Count - i]);
+                    getmovies.Add(AllMovies[temp - i]);
                 }
             }
             else
