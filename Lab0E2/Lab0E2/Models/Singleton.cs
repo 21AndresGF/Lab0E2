@@ -18,7 +18,7 @@ namespace Lab0E2.Models
         {
             get
             {
-                if (_instance == null) _instance = new Data();
+                if (_instance == null) _instance = new Singleton();
                 return _instance;
             }
         }
