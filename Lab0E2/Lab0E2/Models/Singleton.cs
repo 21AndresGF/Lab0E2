@@ -8,12 +8,12 @@ namespace Lab0E2.Models
 {
     public class Singleton
     {
-        private readonly static Singleton _instance = new Singleton();
+        //private readonly static Singleton _instance = new Singleton();
 
         private Singleton()
         {
         }
-
+        private static Singleton _instance = null;
         public static Singleton Instance
         {
             get
