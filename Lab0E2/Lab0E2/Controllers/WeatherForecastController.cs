@@ -22,13 +22,13 @@ namespace Lab0E2.Controllers
         public List<MovieClass> Get()
         {
             MovieSettings set = new MovieSettings();
-            return Singleton.Instance.movies;
+            return Singleton.Instance.MovieClass;
         }
         [HttpPost]
         public void Post(MovieClass value)
         {
             MovieSettings moviepost = new MovieSettings();
-            Singleton.Instance.movies.Add(value);
+            Singleton.Instance.MovieClass.Add(value);
             moviepost.Add(value);
         }
     }

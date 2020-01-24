@@ -7,8 +7,8 @@ namespace Lab0E2.Models
 {
     interface MovieInterfaz
     {
-        public void Add(Movie newdata);
+        public void Add(MovieClass newdata);
 
-        public List<Movie> library();
+        public List<MovieClass> library();
     }
 }
