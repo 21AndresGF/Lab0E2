@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Lab0E2.Models
 {
-    interface MovieInterfaz
+    public interface MovieInterfaz
     {
         public void Add(MovieClass newdata);
 

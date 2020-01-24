@@ -12,25 +12,23 @@ namespace Lab0E2.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        //private readonly ILogger<WeatherForecastController> _logger;
+        private MovieInterfaz _logger;
 
-        //public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        //{
-        //    _logger = logger;
-        //}
+        public WeatherForecastController(MovieInterfaz logger)
+        {
+            _logger = logger;
+        }
         [HttpGet]
         public List<MovieClass> Get()
         {
-            MovieSettings set = new MovieSettings();
-            return Singleton.Instance.MovieClass;
+            return _logger.library();
         }
         
         [HttpPost]
         public void Post([FromBody] MovieClass value)
         {
-            MovieSettings moviepost = new MovieSettings();
-            Singleton.Instance.MovieClass.Add(value);
-            moviepost.Add(value);
+            _logger.Add(value);
+           
         }
     }
 }
